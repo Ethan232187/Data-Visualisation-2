@@ -1,0 +1,17 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Biggest Hubs Across the City" },
+    "data": {
+        "url": "Data/location_data_cleaned.csv"
+    },
+    "transform": [
+        {"filter": "(datum.Connections > 3)"}
+
+    ],
+    "mark": {"type": "bar"},
+    "encoding": {
+        "x": { "field": "City", "type": "nominal", "sort":"-y"},
+        "y": { "field": "Connections", "type": "quantitative"},
+        "color": {"field": "Class"}
+    }
+}
