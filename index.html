@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Column Layout</title>
+    <title>FIT3179 Data Vis 2</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Script to enable vega -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+        
+    <!-- The graph to display -->
+    <script src="vega_lite_vis.js"></script>
 </head>
+
 <body>
     <header>
         <div class="title">
@@ -62,6 +72,7 @@
             <div class="section">
                 <h2>Plane Sizes Scatterplot</h2>
                 <p>Section A of Main Content 2 goes here.</p>
+                <div id="bar_chart"></div>
             </div>
             <div class="section">
                 <h2>Text</h2>
