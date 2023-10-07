@@ -13,10 +13,10 @@ vegaEmbed('#vega_bar_chart', spec2).then(function(result) {
 
 
 var vg_1 = "Charts/fig1_routes_map.vg.json";
-var vg_2 = "Charts/fig2_main_connections_sankey.vg.json";
+var vg_2 = "Charts/fig2_each_connection_heatmap.vg.json";
 var vg_3 = "Charts/fig3_biggest_hubs_bar.vg.json";
 var vg_4 = "Charts/fig4_plane_sizes_scatter.vg.json";
-var vg_5 = "Charts/fig5_each_city_bar.vg.json";
+var vg_5 = "Charts/fig5_capacity_barcode.vg.json";
 
 vegaEmbed("#figure_1", vg_1).then(function(result) {}).catch(console.error);
 vegaEmbed("#figure_2", vg_2).then(function(result) {}).catch(console.error);

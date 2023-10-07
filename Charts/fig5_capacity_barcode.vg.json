@@ -1,0 +1,16 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "How full are the planes" },
+    "data": {
+        "url": "Data/flight_data_cleaned.csv"
+    },
+    "mark": "tick",
+    "encoding": {
+      "x": {"field": "Average Capacity (%)", "type": "quantitative", 
+      "scale": {"domain": [0, 100]}
+      },
+      "y": {"field": "Route Type", "type": "nominal"},
+      "color": {"field": "Route Type"}
+    }
+  }
+  

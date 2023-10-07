@@ -1,0 +1,15 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Traffic Volume Between States" },
+    "data": {
+        "url": "Data/heatmap_data.csv"
+    },
+
+    "mark": {"type": "rect"},
+    "encoding": {
+        "x": { "field": "State1", "type": "nominal", "title":""},
+        "y": { "field": "State2", "type": "nominal", "title":""},
+        "color": {"field": "Value", "type":"quantitative"}
+    }
+}
+
