@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 840,
+  "height": 630,
+  "title": "Connections",
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "Data/map_aus.json",
+        "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+      },
+      "mark": {"type": "geoshape", "fill": "white", "stroke": "black"}
+    },
+    {
+      "data": {
+        "url": "Data/location_data_cleaned.csv"
+      },
+      "mark": {"type": "circle", "tooltip": {"content": "data"}, "color": "black"},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {
+          "field": "Connections",
+          "type": "quantitative",
+          "title": "Num Connections",
+          "scale": {"domain": [-2, 25]}
+        },
+        "tooltip": [
+          {"field": "City", "type": "nominal", "title": "Location"},
+          {"field": "Connections", "type": "quantitative"}
+        ]
+      }
+    },
+    {
+      "data": {"url": "Data/flight_data_cleaned.csv"},
+      "transform": [
+        {
+          "lookup": "City1",
+          "from": {
+            "data": {"url": "Data/location_data_cleaned.csv"},
+            "key": "City",
+            "fields": ["Latitude", "Longitude"]
+          },
+          "as": ["origin_latitude", "origin_longitude"]
+        },
+        {
+          "lookup": "City2",
+          "from": {
+            "data": {"url": "Data/location_data_cleaned.csv"},
+            "key": "City",
+            "fields": ["Latitude", "Longitude"]
+          },
+          "as": ["dest_latitude", "dest_longitude"]
+        }
+      ],
+      "mark": "rule",
+      "encoding": {
+        "longitude": {"field": "origin_longitude", "type": "quantitative"},
+        "latitude": {"field": "origin_latitude", "type": "quantitative"},
+        "longitude2": {"field": "dest_longitude"},
+        "latitude2": {"field": "dest_latitude"},
+        "color": {"field": "Route Type"}
+      }
+    }
+  ]
+}
