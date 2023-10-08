@@ -21,13 +21,14 @@
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
         "size": {
-          "field": "Connections",
+          "field": "Population",
           "type": "quantitative",
-          "title": "Num Connections",
-          "scale": {"domain": [-2, 25]}
+          "title": "Population",
+          "scale": {"domain": [-250000, 5000000]}
         },
         "tooltip": [
           {"field": "City", "type": "nominal", "title": "Location"},
+          {"field": "Population", "type": "quantitative", "title": "Pop"},
           {"field": "Connections", "type": "quantitative"}
         ]
       }

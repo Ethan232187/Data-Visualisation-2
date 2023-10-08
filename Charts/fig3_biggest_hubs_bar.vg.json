@@ -5,13 +5,13 @@
         "url": "Data/location_data_cleaned.csv"
     },
     "transform": [
-        {"filter": "(datum.Connections > 2)"}
+        {"filter": "(datum.Flights > 15000)"}
 
     ],
     "mark": {"type": "bar"},
     "encoding": {
         "x": { "field": "Flights", "type": "quantitative"},
-        "y": { "field": "City", "type": "nominal", "sort":"-y", "title":""},
+        "y": { "field": "City", "type": "nominal", "sort":"x", "title":""},
         "color": {"field": "Class"}
     }
 }
