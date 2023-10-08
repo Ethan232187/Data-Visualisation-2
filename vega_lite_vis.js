@@ -13,8 +13,8 @@ vegaEmbed('#vega_bar_chart', spec2).then(function(result) {
 
 
 var vg_1 = "Charts/fig1_routes_map.vg.json";
-var vg_2 = "Charts/fig2_each_connection_heatmap.vg.json";
-var vg_3 = "Charts/fig3_biggest_hubs_bar.vg.json";
+var vg_2 = "Charts/fig2_state_traffic_heatmap.vg.json";
+var vg_3 = "Charts/fig3_hub_flights_bar.vg.json";
 var vg_4 = "Charts/fig4_plane_sizes_scatter.vg.json";
 var vg_5 = "Charts/fig5_capacity_barcode.vg.json";
 

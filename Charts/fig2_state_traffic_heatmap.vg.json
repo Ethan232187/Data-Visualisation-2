@@ -4,12 +4,17 @@
     "data": {
         "url": "Data/heatmap_data.csv"
     },
-
-    "mark": {"type": "rect"},
+    "transform": [
+        {"filter": "(datum.Value > 0)"}
+    ],
+    "mark": {"type": "rect", "tooltip": {"content": "data"}},
     "encoding": {
         "x": { "field": "State1", "type": "nominal", "title":""},
         "y": { "field": "State2", "type": "nominal", "title":""},
-        "color": {"field": "Value", "type":"quantitative"}
+        "color": {"field": "Value", "type":"quantitative", "bin": true, "title":"Num People"},
+        "tooltip": [
+            {"field": "Value", "type": "quantitative", "title":"People"}
+        ]
     }
 }
 
