@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Traffic Volume Between States" },
+    "width": 500,
+    "height": 500,
+    "title": { "text": "" },
     "data": {
         "url": "Data/heatmap_data.csv"
     },

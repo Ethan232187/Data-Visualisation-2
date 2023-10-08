@@ -46,13 +46,13 @@ header {
 }
 
 .main1 {
-    flex: 6;
+    flex: 5.5;
     padding: 10px;
     border: 1px solid black; 
 }
 
 .main2 {
-    flex: 4;
+    flex: 4.5;
     padding: 10px;
     border: 1px solid black; 
 }

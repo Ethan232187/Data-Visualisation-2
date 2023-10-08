@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 540,
-  "height": 400,
-  "title": "Connections",
+  "width": 800,
+  "height": 600,
+  "title": "",
   "projection": {"type": "mercator"},
   "layer": [
     {

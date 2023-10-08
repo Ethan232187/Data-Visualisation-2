@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Flights in Hub Cities" },
+    "width": 500,
+    "height": 400,
+    "title": { "text": "" },
     "data": {
         "url": "Data/location_data_cleaned.csv"
     },
@@ -10,7 +12,7 @@
     ],
     "mark": {"type": "bar"},
     "encoding": {
-        "x": { "field": "Flights", "type": "quantitative"},
+        "x": { "field": "Flights", "type": "quantitative", "title": "Number of Flights"},
         "y": { "field": "City", "type": "nominal", "sort":"x", "title":""},
         "color": {"field": "Class"}
     }

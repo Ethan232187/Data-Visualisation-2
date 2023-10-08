@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Plane Size across Distance" },
+    "width": 500,
+    "height": 400,
+    "title": { "text": "" },
     "data": {
         "url": "Data/flight_data_cleaned.csv"
     },
@@ -10,7 +12,8 @@
             "encoding": {
                 "x": { "field": "Flight Distance (km)", "type": "quantitative"},
                 "y": { "field": "Plane Size (seats)", "type": "quantitative"},
-                "color": {"field": "Route Type"}
+                "color": {"field": "Route Type"},
+                "size": {"value": 45}
             }
         },
         {
