@@ -6,7 +6,7 @@
     "data": {
         "url": "Data/flight_data_cleaned.csv"
     },
-    "mark": "tick",
+    "mark": {"type": "tick", "tooltip": {"content": "data"}, "color": "black"},
     "encoding": {
       "x": {"field": "Average Capacity (%)", "type": "quantitative",
         "title": "Average Capacity of a Route (%)", 
@@ -14,7 +14,12 @@
         },
       "y": {"field": "Route Type", "type": "nominal", "title": ""},
       "color": {"field": "Route Type", "legend": null},
-      "size": {"value": 30}
+      "size": {"value": 30},
+      "tooltip": [
+        {"field": "City1", "type": "nominal", "title": "City 1"},
+        {"field": "City2", "type": "nominal", "title": "City 2"},
+        {"field": "Average Capacity (%)", "type": "quantitative", "title": "Avg Capacity (%)"}
+      ]
     }
   }
   
