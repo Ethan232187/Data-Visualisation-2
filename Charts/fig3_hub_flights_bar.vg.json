@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
-    "height": 400,
+    "width": "container",
+    "height": "container",
     "title": { "text": "" },
     "data": {
         "url": "Data/location_data_cleaned.csv"
