@@ -1,20 +1,28 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": "container",
-    "background": "null",
+    "width": 450,
+    "height": 450,
+    "background": null,
     "title": { "text": "" },
     "data": {
         "url": "Data/flight_data_cleaned.csv"
     },
     "layer": [
         {
-            "mark": {"type": "circle"},
+            "mark": {"type": "circle", "tooltip": {"content": "data"}},
             "encoding": {
                 "x": { "field": "Flight Distance (km)", "type": "quantitative"},
                 "y": { "field": "Plane Size (seats)", "type": "quantitative"},
                 "color": {"field": "Route Type"},
-                "size": {"value": 45}
+                "size": {"value": 45},
+                "tooltip": [
+                    {"field": "City1", "type": "nominal", "title": "Route City 1"},
+                    {"field": "City2", "type": "nominal", "title": "Route City 2"},
+                    {"field": "Flight Distance (km)", "type":"quantitative", "title": "Distance (km)",
+                     "format": ","},
+                    {"field": "Plane Size (seats)", "type": "quantitative", "format": ".0f"},
+                    {"field": "Route Type", "type":"ordinal"}
+                ]
             }
         },
         {

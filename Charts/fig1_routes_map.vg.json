@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height": "container",
+  "width": 600,
+  "height": 600,
   "title": "",
-  "background": "null",
+  "background": null,
   "projection": {"type": "mercator"},
   "layer": [
     {
@@ -25,11 +25,12 @@
           "field": "Population",
           "type": "quantitative",
           "title": "Population",
-          "scale": {"domain": [-250000, 5000000]}
+          "scale": {"domain": [-250000, 5000000]},
+          "legend": {"format": ".1s"}
         },
         "tooltip": [
           {"field": "City", "type": "nominal", "title": "Location"},
-          {"field": "Population", "type": "quantitative", "title": "Pop"},
+          {"field": "Population", "type": "quantitative", "title": "Pop", "format": ".3s"},
           {"field": "Connections", "type": "quantitative"}
         ]
       }

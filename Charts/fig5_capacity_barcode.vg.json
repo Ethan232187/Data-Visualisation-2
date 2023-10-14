@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": "container",
-    "background": "null",
+    "width": 400,
+    "height": 290,
+    "background": null,
     "title": { "text": "" },
     "data": {
         "url": "Data/flight_data_cleaned.csv"
@@ -14,12 +14,13 @@
         "scale": {"domain": [0, 100]}
         },
       "y": {"field": "Route Type", "type": "nominal", "title": ""},
-      "color": {"field": "Route Type", "legend": null},
+      "color": {"field": "Route Type"},
       "size": {"value": 30},
       "tooltip": [
         {"field": "City1", "type": "nominal", "title": "City 1"},
         {"field": "City2", "type": "nominal", "title": "City 2"},
-        {"field": "Average Capacity (%)", "type": "quantitative", "title": "Avg Capacity (%)"}
+        {"field": "Average Capacity (%)", "type": "quantitative", "title": "Avg Capacity (%)",
+        "format": ".0f"}
       ]
     }
   }
