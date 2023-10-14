@@ -16,7 +16,11 @@ header {
 .title {
     flex: 4.5;
     color: #000;
-    text-align: center;
+    text-align: left;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-left: 500px;
 }
 
 .filter {
@@ -30,7 +34,7 @@ header {
 }
 
 .sidebar {
-    width: 200px;
+    width: 220px;
     padding-top: 30px;
     padding-bottom:75px;
     display: flex;
@@ -63,8 +67,6 @@ header {
 
 .idiom {
     padding-left: 15px;
-    width: 500;
-    height: 500;
 }
 
 .kpi {

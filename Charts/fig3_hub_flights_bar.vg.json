@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": "container",
-    "background": "null",
+    "width": 500,
+    "height": 400,
+    "background": null,
     "title": { "text": "" },
     "data": {
         "url": "Data/location_data_cleaned.csv"
@@ -11,10 +11,12 @@
         {"filter": "(datum.Flights > 15000)"}
 
     ],
-    "mark": {"type": "bar"},
+    "mark": {"type": "bar", "tooltip": {"content": "data"}},
     "encoding": {
         "x": { "field": "Flights", "type": "quantitative", "title": "Number of Flights"},
         "y": { "field": "City", "type": "nominal", "sort":"x", "title":""},
-        "color": {"field": "Class"}
+        "color": {"field": "Class"},
+        "tooltip": [{"field": "Flights", "type": "quantitative", "title": "Num Flights",
+                     "format": ","}]
     }
 }

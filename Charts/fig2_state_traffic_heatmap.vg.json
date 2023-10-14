@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": "container",
-    "background": "null",
+    "width": 550,
+    "height": 550,
+    "background": null,
     "title": { "text": "" },
     "data": {
         "url": "Data/heatmap_data.csv"
@@ -14,9 +14,10 @@
     "encoding": {
         "x": { "field": "State1", "type": "nominal", "title":""},
         "y": { "field": "State2", "type": "nominal", "title":""},
-        "color": {"field": "Value", "type":"quantitative", "bin": true, "title":"Num People"},
+        "color": {"field": "Value", "type":"quantitative", "bin": true, "title":"Num People", 
+                  "legend": {"format": ".1s"}},
         "tooltip": [
-            {"field": "Value", "type": "quantitative", "title":"People"}
+            {"field": "Value", "type": "quantitative", "title":"People", "format": ".3s"}
         ]
     }
 }
