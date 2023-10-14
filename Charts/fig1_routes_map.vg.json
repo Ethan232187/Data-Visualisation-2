@@ -3,6 +3,7 @@
   "width": "container",
   "height": "container",
   "title": "",
+  "background": "null",
   "projection": {"type": "mercator"},
   "layer": [
     {
