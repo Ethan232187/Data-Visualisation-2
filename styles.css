@@ -29,15 +29,15 @@ header {
 
 .container {
     display: flex;
-    flex: 1;
+    flex: 0.5;
     margin: 10px;
 }
 
 .sidebar {
-    width: 220px;
     padding-top: 30px;
     padding-bottom:75px;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
     background-color: #87CEEB;
@@ -45,14 +45,14 @@ header {
 }
 
 .main1 {
-    flex: 5.5;
+    flex: 4;
     padding: 10px;
     background-color: white; 
     border-top: 3px solid black;
 }
 
 .main2 {
-    flex: 4.5;
+    flex: 3;
     padding: 10px;
     background-color: white;
     border-top: 3px solid black;
